@@ -1,0 +1,1 @@
+let tabs=await chrome.tabs.query({});for(let tab of(console.clear(),await chrome.runtime.reload(),tabs))chrome.scripting.executeScript({target:{tabId:tab.id},func:()=>{console.clear()}});

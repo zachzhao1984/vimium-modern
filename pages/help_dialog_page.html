@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vimium Modern 帮助</title>
+    <meta name="color-scheme" content="light dark">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../content_scripts/vimium.css" />
+    <link rel="stylesheet" type="text/css" href="./key_mappings.css" />
+    <link rel="stylesheet" type="text/css" href="./help_dialog_page.css" />
+
+    <script src="help_dialog_page.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- Note that the command placeholders (data-group=navigation) will be replaced by the
+         background page with the user's key bindings when the dialog is shown. -->
+    <div id="container">
+      <div id="dialog">
+        <header>
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3.4 6.2 20.2l5.1-3.1 4.4 3.4L12 3.4Z" fill="#fff"/></svg>
+          </div>
+          <h1>Vimium Modern 帮助<span id="help-dialog-title"></span></h1>
+
+          <div class="head-links">
+            <a id="options-page" href="#">设置</a>
+            <a href="https://github.com/philc/vimium/wiki" target="_blank">Wiki</a>
+            <a id="close" href="#" aria-label="关闭">&times;</a>
+          </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <div id="commands-section">
+          <div class="column">
+            <h2>页面导航</h2>
+            <div data-group="navigation"></div>
+
+            <h2>历史前进后退</h2>
+            <div data-group="history"></div>
+
+            <h2>页内查找</h2>
+            <div data-group="find"></div>
+          </div>
+
+          <div class="column">
+            <h2>Omnibar 搜索</h2>
+            <div data-group="vomnibar"></div>
+
+            <h2>标签页</h2>
+            <div data-group="tabs"></div>
+
+            <h2>其他</h2>
+            <div data-group="misc"></div>
+          </div>
+        </div>
+
+        <div id="toggle-advanced">
+          <a href="#">显示高级命令</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <footer>
+          <div>
+            用着顺手？<a
+              target="_blank"
+              href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/reviews"
+            >去商店留个评价</a>。<br>
+            发现问题？<a
+              target="_blank"
+              href="https://github.com/philc/vimium/issues"
+            >在这里反馈</a>。
+          </div>
+
+          <div class="version-info">
+            版本 <span id="vimium-version"></span>
+            <br>
+            <a
+              href="https://github.com/philc/vimium/blob/master/CHANGELOG.md"
+              target="_blank"
+            >更新内容</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <template id="row">
+      <div class="row">
+        <div class="key-bindings"></div>
+        <div class="help-description"></div>
+      </div>
+    </template>
+
+    <template id="keys">
+      <div class="key-block">
+        <span class="key"></span><span class="comma">,</span>
+      </div>
+    </template>
+  </body>
+</html>

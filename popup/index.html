@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vimium Modern</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="/static/css/popup.7ffcced806.css" rel="stylesheet"></head>
+<body hidden>
+<div class="pop">
+  <header class="head">
+    <div class="mark" aria-hidden="true">
+      <img id="brandIcon" src="/icons/action_disabled.svg" alt="">
+    </div>
+    <div class="who">
+      <div class="host" id="host">正在读取…</div>
+      <div class="state" id="state">
+        <span class="dot" id="stateDot"></span>
+        <span id="stateText">—</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="body">
+    <button class="btn block" id="toggleSite" disabled>在本页停用 Vimium Modern</button>
+
+    <section class="rules" id="rulesSection" hidden>
+      <div class="rules-head">
+        <span class="rules-title">本页生效的规则</span>
+        <span class="rules-note">改动后点「保存」</span>
+      </div>
+      <div class="rules-body" id="ruleList"></div>
+      <button class="add" id="addRule">添加规则</button>
+    </section>
+
+    <div class="notice" id="notice" hidden></div>
+  </main>
+
+  <footer class="foot">
+    <button class="link" id="openOptions">所有设置</button>
+    <span class="grow"></span>
+    <button class="btn" id="cancel">关闭</button>
+    <button class="btn primary" id="save" disabled>保存</button>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script defer src="/popup/language.js"></script></body>
+</html>

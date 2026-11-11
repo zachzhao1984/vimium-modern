@@ -1,0 +1,1 @@
+import{TabRecency as e}from"./tab_recency.js";export function isFirefox(){return globalThis.browser?.runtime.getURL("").startsWith("moz")??!1}export async function getFirefoxVersion(){return isFirefox()?(await browser.runtime.getBrowserInfo()).version:null}export const tabRecency=new e;tabRecency.init();
