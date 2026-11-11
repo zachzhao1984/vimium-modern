@@ -85,12 +85,13 @@
       ":host { pointer-events: none; }",
       "svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }",
       "path { fill: none; stroke-linecap: round; }",
-      ".halo { stroke: #60ffb7; stroke-width: 7px; opacity: .28; filter: url(#filament-glow); }",
-      ".line { stroke: #f2fff7; stroke-width: 1.35px; }",
+      ".halo { stroke: #2fc88d; stroke-width: 8px; opacity: .34; filter: url(#filament-glow); }",
+      ".edge { stroke: #064d37; stroke-width: 2.4px; opacity: .92; }",
+      ".line { stroke: #dcffe9; stroke-width: .7px; }",
       ".bead {",
-      "  position: absolute; width: 7px; height: 7px; margin: -3.5px; border-radius: 50%;",
-      "  background: #f7fff9;",
-      "  box-shadow: 0 0 3px #fff, 0 0 12px #65ffb9, 0 0 22px rgba(80, 255, 178, .58);",
+      "  position: absolute; width: 8px; height: 8px; margin: -4px; border-radius: 50%;",
+      "  background: #074a35; border: 1px solid #8fffc6;",
+      "  box-shadow: 0 0 4px rgba(8, 92, 62, .7), 0 0 12px #4fffb0, 0 0 22px rgba(62, 235, 151, .55);",
       "}",
     ].join("\n");
     shadow.innerHTML =
@@ -99,6 +100,7 @@
       "<defs><filter id=\"filament-glow\" x=\"-50%\" y=\"-50%\" width=\"200%\" height=\"200%\">" +
       "<feGaussianBlur stdDeviation=\"5\" /></filter></defs>" +
       "<path class=\"halo\" d=\"" + pathData + "\" />" +
+      "<path class=\"edge\" d=\"" + pathData + "\" />" +
       "<path class=\"line\" d=\"" + pathData + "\" />" +
       "</svg>" +
       "<div class=\"bead\" style=\"left:" + to.x + "px;top:" + to.y + "px\"></div>";
